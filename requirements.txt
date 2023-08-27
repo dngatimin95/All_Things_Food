@@ -1,4 +1,4 @@
-Flask==2.3.2
+Flask==2.2.5
 Flask_PyMongo==2.3.0
 marshmallow==3.20.1
 pymongo==4.4.1
