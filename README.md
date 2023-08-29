@@ -17,4 +17,5 @@ Instead of opting for traditional relational databases like PostgresSQL, I chose
 ## So what's next to do?
 - [ ] Integrate GMaps API fully - currently users only input every detail by themselves
 - [ ] Understand how to use Docker and dockerize appl so that it can be used in other environments
+- [ ] Ideally carry out some form of unit testing to make sure code works as planned
 - [ ] Build the proximity and recommendation aspect of this list
