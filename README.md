@@ -9,7 +9,7 @@ This repository focuses on developing my understanding of APIs and backend capab
 1. User Interaction: Users engage with the Telegram bot to input place names and set priority scores for their visits.
 2. Automatic Enrichment: The project interfaces with the Google Maps API to extract essential information about the saved places, including name, address, URL, and restaurant type.
 3. Data Storage: Information will be sent to the API and MongoDB Atlas Cloud instance stores all place-related data, ensuring secure and organized storage.
-4. Location Queries: Users can retrieve saved places based on priority and proximity (To Be Built).
+4. Location Queries: Users can retrieve saved places based on priority and proximity.
 
 ## Why MongoDB? Why not PostgresSQL?
 Instead of opting for traditional relational databases like PostgresSQL, I chose MongoDB for its NoSQL capabilities. This choice was motivated by a desire to explore dynamic schemas and adaptability to unstructured data. MongoDB's compatibility with Flask APIs and its flexibility further solidified its suitability for the project.
