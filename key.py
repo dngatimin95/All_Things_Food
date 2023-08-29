@@ -1,3 +1,3 @@
-bot_token = ""
-bot_name = "food_reco_bot"
-URL = ""
+BOT_TOKEN = ""
+BOT_NAME = "food_reco_bot"
+GMAPS_API = ""
