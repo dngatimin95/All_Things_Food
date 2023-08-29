@@ -15,5 +15,6 @@ This repository focuses on developing my understanding of APIs and backend capab
 Instead of opting for traditional relational databases like PostgresSQL, I chose MongoDB for its NoSQL capabilities. This choice was motivated by a desire to explore dynamic schemas and adaptability to unstructured data. MongoDB's compatibility with Flask APIs and its flexibility further solidified its suitability for the project.
 
 ## So what's next to do?
+- [ ] Integrate GMaps API fully - currently users only input every detail by themselves
 - [ ] Understand how to use Docker and dockerize appl so that it can be used in other environments
 - [ ] Build the proximity and recommendation aspect of this list
