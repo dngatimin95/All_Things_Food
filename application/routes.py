@@ -80,6 +80,39 @@ def one_locus(id):
         
     else:
         return not_found()
+    
+
+
+# Applies only to one place to get, delete or update entry
+@app.route('/locus/<name>', methods=['GET', 'DELETE', 'PUT'])
+def one_locus(name):
+    # Get only one entry based on ID provided
+    if request.method == 'GET':
+        locus = LocusSchema().dump(db.places.find_one({'name': {'$in': [name]}}))       
+        return jsonify(locus)
+    
+    # Update an entry based on name of place provided and ensures duplicate name doesnt get overwritten
+    elif request.method == 'PUT':
+        _json = LocusSchema().load(request.get_json())
+
+        place_name = _json['name']
+        prev_place_name = db.places.find_one({'name': place_name})
+        if prev_place_name and str(prev_place_name['name']) != str(name):
+            return jsonify({'error': 'Location with the same ID already exists'}), 409
+
+        result = db.places.update_one({'name': {'$in': [name]}}, {'$set': _json})
+        if result.modified_count:
+            return jsonify({'message': 'Location updated successfully'}), 202
+        else:
+            return jsonify({'message': 'Location not found'}), 404
+
+    # Delete an entry based on ID provided
+    elif request.method == 'DELETE':
+        db.places.delete_one({'name': {'$in': [name]}})
+        return jsonify({'message': 'Location deleted successfully!'}), 200
+        
+    else:
+        return not_found()
 
 
 

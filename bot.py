@@ -58,7 +58,7 @@ def specify_locus(data, message):
         text = "Please specify the number of places you want to get and if you want it ranked based on priority score."
         handler = get_nearest_locus
     elif data.startswith('get'):
-        text = "Please specify the number of places you want to get and if you want it ranked based on priority score."
+        text = "Please specify the place you want to get or the type and if you want it ranked based on priority score."
         handler = get_locus
     elif data.startswith('delete'):
         text = "Please specify the place you want to delete."
@@ -96,7 +96,7 @@ def add_locus(message):
     bot.send_message(message.chat.id, response.json())
     return response.json()
 
-# get nearest places from allThingsFood API
+# get nearest places from allThingsFood API (TBB)
 def get_nearest_locus(message):
     place_amt_rank = message.text
     place_amt_rank_arr = " ".split(place_amt_rank.strip())
